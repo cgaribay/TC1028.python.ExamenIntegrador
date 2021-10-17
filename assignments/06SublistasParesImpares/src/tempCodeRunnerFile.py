@@ -1,3 +1,0 @@
-
-        print("PARES")
-        print(lp)
