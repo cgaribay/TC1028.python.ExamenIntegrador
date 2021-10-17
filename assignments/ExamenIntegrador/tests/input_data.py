@@ -4,26 +4,26 @@
 input_values = [
     # Test case 1
     (
-    ["6", "0", "1", "2", "*"],
-    ["", "", "", "", "", "PARES=3", "IMPARES=1"],
-    ["La salida no cumple con el caso de prueba\nSon 3 pares y 1 impar."]
+    ["a", "b", "Luis PereZ"],
+    ["", "Error", "", "Error","", "Felicidades por alcanzar la meta de ventas"],
+    ["La salida no cumple con el caso de prueba\nLuis Peres SI alcanzó la meta de ventas."]
     ),
     # Test case 2
     (
-    ["0", "1", "2", "3", "4", "*"],
-    ["", "", "", "", "", "", "PARES=3", "IMPARES=2"],
-    ["La salida no cumple con el caso de prueba\nSon 3 pares y 2 impares."]
+    ["a", "b", "Carlos Lopez"],
+    ["", "Error", "", "Error","", "Te falta 420 para alcanzar la meta de ventas"],
+    ["La salida no cumple con el caso de prueba\nLuis Peres SI alcanzó la meta de ventas."]
     ),
     # Test case 3
     (
-    ["0", "2", "4", "*"],
-    ["", "", "", "", "PARES=3", "IMPARES=0"],
-    ["La salida no cumple con el caso de prueba\nSon 3 pares y 0 impares."]
+    ["a", "b", "Mariana Gonzalez"],
+    ["", "Error", "", "Error","", "Felicidades por alcanzar la meta de ventas"],
+    ["La salida no cumple con el caso de prueba\nLuis Peres SI alcanzó la meta de ventas."]
     ),
-    # Test case 3
+    # Test case 4
     (
-    ["1", "7", "9", "*"],
-    ["", "", "", "", "PARES=0", "IMPARES=3"],
-    ["La salida no cumple con el caso de prueba\nSon 0 pares y 3 impares."]
+    ["a", "b", "andrea gutierrez"],
+    ["", "Error", "", "Error","", "Felicidades por alcanzar la meta de ventas"],
+    ["La salida no cumple con el caso de prueba\nLuis Peres SI alcanzó la meta de ventas."]
     )
     ]

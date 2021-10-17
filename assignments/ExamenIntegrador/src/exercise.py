@@ -1,8 +1,8 @@
 
 from pathlib import Path
-import productos
-import vendedores
-import ventas
+import src.productos
+import src.vendedores
+import src.ventas
 
 lista_productos = []
 
@@ -47,7 +47,7 @@ def buscar_elemento(matriz, columna, valor):
 # obtener_id
 # matriz: la tabla en la que deseas encontrar el identificador
 # indice: el indice del elemento del que deseas encontrar el identificador o -1 si el indice es incorrecto
-def obtener_elemento(matriz, indice):
+def obtener_id(matriz, indice):
     if indice < len(matriz[0]) and indice >= -len(matriz[0]):
         return matriz[0][indice]
     else:
@@ -55,7 +55,7 @@ def obtener_elemento(matriz, indice):
 
 # Abrir el archivo de productos, leer su informacion y carga la informacion en lista_productos
 def cargar_productos():
-    ruta_productos = Path('archivos', 'productos.csv')
+    ruta_productos = Path('assignments/ExamenIntegrador/src/archivos', 'productos.csv')
     archivo_productos = open(ruta_productos)
     contenido_productos = archivo_productos.readlines()
     for line in contenido_productos:
@@ -64,7 +64,7 @@ def cargar_productos():
 
 # Abrir el archivo de vendedores, leer su informacion y carga la informacion en lista_vendedores
 def cargar_vendedores():
-    ruta_vendedores = Path('archivos', 'vendedores.csv')
+    ruta_vendedores = Path('assignments/ExamenIntegrador/src/archivos', 'vendedores.csv')
     archivo_vendedores = open(ruta_vendedores)
     contenido_vendedores = archivo_vendedores.readlines()
     for line in contenido_vendedores:
@@ -73,21 +73,24 @@ def cargar_vendedores():
 
 # Abrir el archivo de ventas, leer su informacion y carga la informacion en lista_ventas
 def cargar_ventas():
-    ruta_ventas = Path('archivos', 'ventas.csv')
+    ruta_ventas = Path('assignments/ExamenIntegrador/src/archivos', 'ventas.csv')
     archivo_ventas = open(ruta_ventas)
     contenido_ventas = archivo_ventas.readlines()
     for line in contenido_ventas:
         lista_ventas.append(line.strip().split(','))
     archivo_ventas.close()
 
+#revisar_metas
+#Pregunta al usuario el nombre del vendedor, revisa las ventas de ese vendedor e imprimir el mensaje correspondiente
+def revisar_metas():
+        pass
+
 def main():
     cargar_productos()
     cargar_vendedores()
     cargar_ventas()
 
-    print_matriz(lista_productos, productos.COLUMNAS)
-    print_matriz(lista_vendedores, vendedores.COLUMNAS)
-    print_matriz(lista_ventas, ventas.COLUMNAS)
+    revisar_metas()
 
 if __name__=='__main__':
     main()
